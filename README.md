@@ -7,6 +7,7 @@ Lo dejo público por si alguien necesita de automatización para sus instalacion
 Escribe en powershell lo siguiente, y te bajará MI configuración.
 
 Idealmente se debe forkear este proyecto, y modificar esta linea, con tu usuario.
+
     iex ((New-Object System.Net.WebClient).DownloadString('NUEVA URL'))
 
 # Configuracion de WinConfig
