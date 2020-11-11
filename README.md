@@ -12,15 +12,15 @@ Idealmente se debe forkear este proyecto, y modificar esta linea, con tu usuario
 
 # Configuracion de WinConfig
     WinConfig.ps1 -h para mostrar la ayuda.
-
     Usar la opcion -debloat para eliminar todo e crapware.
-    
     Usar la opcion -nosoftware para no descargar e instalar software.
-    
+    Usar la opcion -nomanual para no abrir las urls de descarga manual.
     Usar la opcion -noconfig para no descargar y copiar configuraciones.
     
 
 Edita en el script el array $urls para añadir o eliminar tus programas o actualizar links
+
+Edita en el script el array $manual para añadir las urls de softwares que generan un token de descarga cada vez y no se peuden automatizar.
 
 Edita en el script el array de arrays $configs para bajar y copiar a la carpeta seleccionada tus configuraciones
 
