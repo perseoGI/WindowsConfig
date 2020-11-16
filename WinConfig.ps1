@@ -61,7 +61,9 @@ $manuals = (
 
 #lista de configuraciones. no borrar la coma inicial, es necesaria para forzar que cree arrays de arrays
 $configs = (
-    ,($DesktopPath,"https://github.com/petacreepers23/MusicPlayer/raw/main/Javier%20Miguel%20Gonzalez.pfx", "cert.pfx")
+    ,($DesktopPath,"https://github.com/petacreepers23/MusicPlayer/raw/main/Javier%20Miguel%20Gonzalez.pfx", "cert.pfx"),
+    ("$DocumentsPath\WindowsPowerShell","https://raw.githubusercontent.com/petacreepers23/WinConfig/main/profile.ps1","profile.ps1"),
+    ("C:\Users\usuario\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState","https://raw.githubusercontent.com/petacreepers23/WinConfig/main/settings.json","settings.json")
 )
 
 ###########################################################################################
