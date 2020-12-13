@@ -63,7 +63,7 @@ $manuals = (
 $configs = (
     ,($DesktopPath,"https://github.com/petacreepers23/MusicPlayer/raw/main/Javier%20Miguel%20Gonzalez.pfx", "cert.pfx"),
     ("$DocumentsPath\WindowsPowerShell","https://raw.githubusercontent.com/petacreepers23/WinConfig/main/profile.ps1","profile.ps1"),
-    ("C:\Users\usuario\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState","https://raw.githubusercontent.com/petacreepers23/WinConfig/main/settings.json","settings.json")
+    ("$DocumentsPath\..\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState","https://raw.githubusercontent.com/petacreepers23/WinConfig/main/settings.json","settings.json")
 )
 
 ###########################################################################################
