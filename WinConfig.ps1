@@ -37,6 +37,7 @@ $urls = (
     "https://nmap.org/dist/nmap-7.91-setup.exe",
     "https://github.com/pbatard/rufus/releases/download/v3.12/rufus-3.12.exe",
     "https://dl.bitvise.com/BvSshClient-Inst.exe",
+    "https://github.com/microsoft/terminal/releases/download/v1.4.3243.0/Microsoft.WindowsTerminal_1.4.3243.0_8wekyb3d8bbwe.msixbundle",
 #UTILIDADES
     "https://www.sumatrapdfreader.org/dl2/SumatraPDF-3.2-64-install.exe",
     "https://www.janboersma.nl/gett/setup/TyreSetup_x64.exe",
@@ -49,7 +50,6 @@ $urls = (
 
 #lista de programas cuya descarga no se puede (o me da pereza de hacer webscrapping para) automatizar
 $manuals = (
-    "https://github.com/microsoft/terminal",
     "https://github.com/neovim/neovim/releases/nightly",
     "https://github.com/bmrf/tron",
     "https://www.ccleaner.com/es-es/ccleaner/download",
