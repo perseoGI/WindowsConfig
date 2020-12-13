@@ -1,3 +1,6 @@
+#making sure it accepts utf8
+$OutputEncoding = [console]::InputEncoding = [console]::OutputEncoding = New-Object System.Text.UTF8Encoding
+
 #Bienvenida...
 $saludos = @(
     "Que los dioses de la eficiencia te acompañen...",
