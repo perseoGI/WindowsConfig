@@ -1,5 +1,5 @@
 #Unicode...
-$OutputEncoding = [console]::InputEncoding = [console]::OutputEncoding = New-Object System.Text.Unicode
+$OutputEncoding = [console]::InputEncoding = [console]::OutputEncoding = New-Object System.Text.UnicodeEncoding
 
 #Bienvenida...
 $saludos = @(
