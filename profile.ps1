@@ -1,5 +1,5 @@
-#making sure it accepts utf8
-$OutputEncoding = [console]::InputEncoding = [console]::OutputEncoding = New-Object System.Text.UTF8Encoding
+#Unicode...
+$OutputEncoding = [console]::InputEncoding = [console]::OutputEncoding = New-Object System.Text.Unicode
 
 #Bienvenida...
 $saludos = @(
@@ -51,9 +51,15 @@ Write-Host ""
 
 #Variables de entorno
 Remove-Variable -Force HOME
-Set-Variable HOME [Environment]::GetFolderPath("Desktop")
+$HOME = [System.Environment]::GetFolderPath("Desktop")
 cd $HOME
+
+#Funciones utiles
+function launchExplorerHere {
+	Start-Process explorer.exe "."
+}
 
 #Alias
 Set-Alias vim nvim
 Set-Alias vi nvim
+Set-Alias ex launchExplorerHere
