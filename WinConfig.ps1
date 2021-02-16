@@ -3,9 +3,9 @@
 param(
 [switch]$h = $false,
 [switch]$debloat = $false,
-[switch]$nosoftware = $false,
-[switch]$noconfig = $false,
-[switch]$nomanual = $false
+[switch]$software = $false,
+[switch]$config = $false,
+[switch]$manual = $false
 )
 
 #lista de variables de entorno comoda para acceso a directorios del usuario actual
@@ -96,7 +96,7 @@ if($debloat){
 }
 
 #3: Bucle de instalacion de programas
-if(-NOT($nosoftware)){
+if($software){
     Write-Output("Comienza la descarga e instalacion de programas.")
     Foreach($url in $urls) {
         Write-Output("Descargando... " + $url)
@@ -110,7 +110,7 @@ if(-NOT($nosoftware)){
 }
 
 #4: Bucle de programas que se deben descargar de forma manual
-if(-NOT($nomanual)){
+if($manual){
     Write-Output("Comienza la descarga de SW manual.")
     Write-Output("Hasta que no se cierre la ventana actual del explorador, no se continua con la instalación")
     Foreach($man in $manuals) {
@@ -122,13 +122,13 @@ if(-NOT($nomanual)){
 }
 
 #5: Bucle de instalacion de configuraciones
-if(-NOT($noconfig)){
+if(config){
     Write-Output("Comienza la descarga e instalacion de configuraciones.")
-    Foreach($config in $configs) {
-        Write-Output("Descargando... " + $config[1])
-        Invoke-WebRequest -Uri $config[1] -OutFile $config[2]
-        Write-Output("Moviendo " + $config[2] + " a " + $config[0])
-        Move-Item -Path $config[2] -Destination $config[0] -Force
+    Foreach($cfg in $configs) {
+        Write-Output("Descargando... " + $cfg[1])
+        Invoke-WebRequest -Uri $cfg[1] -OutFile $cfg[2]
+        Write-Output("Moviendo " + $cfg[2] + " a " + $cfg[0])
+        Move-Item -Path $cfg[2] -Destination $cfg[0] -Force
     }
     Write-Output("Descarga e instalacion de configuraciones finalizada.")
     Write-Output("")
